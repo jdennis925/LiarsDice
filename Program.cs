@@ -27,9 +27,9 @@ namespace LiarsDice
                 {
                     roll.Add(_random.Next(1, 7));
                 }
+                roll.Sort();
                 var result = "[" + string.Join(',', roll) + "]";
-                Console.WriteLine(
-                    $"Roll: {result}");
+                Console.WriteLine($"Roll: {result}");
 
                 Console.WriteLine("Did you lose a die? (y/n)");
                 var yn = Console.ReadLine();
